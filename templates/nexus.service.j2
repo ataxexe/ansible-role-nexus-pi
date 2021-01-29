@@ -1,0 +1,16 @@
+[Unit]
+Description=nexus service
+After=network.target
+  
+[Service]
+Type=forking
+LimitNOFILE=65536
+ExecStart={{ nexus_install_dir }}/bin/nexus start
+ExecStop={{ nexus_install_dir }}/bin/nexus stop
+User=nexus
+Restart=always
+TimeoutSec=600
+Environment=INSTALL4J_JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf
+
+[Install]
+WantedBy=multi-user.target

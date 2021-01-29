@@ -1,0 +1,7 @@
+nexus_version: 3.29.2-02
+nexus_package: nexus-{{ nexus_version }}-unix.tar.gz
+
+nexus_root_dir: /opt/nexus
+nexus_dir: "nexus-{{ nexus_version }}"
+nexus_install_dir: "{{ nexus_root_dir }}/{{ nexus_dir }}"
+nexus_package_file: "{{ nexus_root_dir }}/{{ nexus_package }}"
